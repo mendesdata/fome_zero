@@ -85,7 +85,7 @@ def clean_data( df ):
     return df
 
 # ler dados do arquivo csv
-def read_data( file ):
+def load_data( file ):
     return pd.read_csv( file )
     
 # Retorna a imagem do logo do projeto

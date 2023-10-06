@@ -1,4 +1,4 @@
-# >>> Import Packages
+# >>> Import Libraries
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
@@ -45,7 +45,7 @@ def main():
     st.set_page_config( page_title='Fome Zero - Main Page', layout='wide' )  
     
     # Coletar dados originais
-    df_raw = gf.read_data( 'data/zomato.csv' )
+    df_raw = gf.load_data( 'data/zomato.csv' )
     
     # Limpar dataset
     df = gf.clean_data( df_raw )
@@ -73,13 +73,13 @@ def main():
             col3.metric( 'Cidades cadastradas', df['city'].nunique()  ) 
     
         with col4:
-            col4.metric( 'Avaliações Feitas na Plataforma',  str( format( math.floor( df['votes'].sum() ), ',.0f' ) )  ) 
+            col4.metric( 'Avaliações Feitas na Plataforma',  str( format( math.floor( df['votes'].sum() ), ',.0f' ) ).replace(",", ".")  ) 
     
         with col5:
             col5.metric( 'Tipos de Culinárias Oferecidos', df['cuisines'].nunique()  ) 
     
     with st.container():
-        #st.header(' Mapa')
+        st.subheader( 'Mapa dos restaurantes' )
         map = get_map_restaurants_by_country( df )
         folium_static( map, width=1024, height=600 )
 
@@ -89,7 +89,4 @@ def main():
 if __name__ == "__main__":
     main()
     
-
-        
-        
 

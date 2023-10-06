@@ -1,5 +1,5 @@
 
-# >>> Import Packages
+# >>> Import Libraries
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -45,7 +45,7 @@ def main():
     st.set_page_config( page_title='Fome Zero - Visão Cidades', layout='wide' )
     
     # extraindo dados originais
-    df_raw = gf.read_data( 'data/zomato.csv' )
+    df_raw = gf.load_data( 'data/zomato.csv' )
     
     # limpando o dataset
     df = gf.clean_data( df_raw )
