@@ -35,7 +35,7 @@ Dessa forma, são objetivos deste projeto:
     * Tipos de Culinárias:
         * Quadro indicando qual o restaurante melhor ranqueado para cada tipo de culinária selecionada (maximo de 5 por consulta). Serão apresentados as seguintes informações dos restaurantes: nome, nota de avaliação, país e cidade. Os critérios de ranqueamento dos restaurantes estão apresentados na seção  **"2.3 Premissas"** deste documento.
         * Gráficos dos melhores e piores tipos de culinárias a partir das notas de avaliação dos restaurantes realizadas pelos clientes. O número máximo de tipos de culinárias por gráfico será de 20. Além da possibilidade de filtragem dos dados por país.
-2. Responder perguntas de negócio organizadas por 4 temas: País, Cidades, Restaurantes e Tipos de Culinárias. A relação das perguntas e suas respectivas respostas estão na seção "3.2 Perguntas de Negócio"
+2. Responder perguntas de negócio organizadas por 4 temas: País, Cidades, Restaurantes e Tipos de Culinárias. A relação das perguntas estão na seção "3.2 Perguntas de Negócio". As respostas das perguntas constam nos dashboards apresentados no item anterior.
 
 # 2. Premissas de Negócio
 ## 2.1. Os dados
@@ -77,7 +77,7 @@ As colunas da base de dados são:
 05. **Responder as perguntas de Negócio:**  O objetivo desta etapa é utilizar todo o conhecimento adquirido nas etapas anteriores e criar estratégias para responder as perguntas realizadas.
 
 ## 2.3. Ferramentas e Métodos Utilizados
-- Python 3.8.13
+- Python 3.11.5
 - Jupyter Notebook
 - CRISP-DS
 - Git e GitHub
@@ -182,14 +182,18 @@ As colunas da base de dados são:
 
 
 # 3. Resultado de Negócio
-## 3.1. Visão Geral 
+## 3.1. Oportunidades Identificadas
+Apesar de estar presente em 15 países, a plataforma **Fome Zero** possui um alto grau de concentração no número de restaurantes em apenas dois países: India e Estados Unidos. Ambos representam praticamente 2/3 do total de restaurantes cadastrados. Há oportunidades de crescimento em países cuja população ultrapassa 200 milhões de habitantes, como Brasil e Indonésia.
+
+Os clientes avaliam mais frequentemente os restaurantes que aceitam pedidos on-line. E no entanto, os restaurantes que não oferecem essa modalidade são maioria na plataforma. Convencer os restaurantes a adotar essa modalidade pode aumentar consideravelmente o engajamento de seus clientes, e por consequência, o da plataforma.
 
 ## 3.2. Exibição das Análises
 Foi criado uma aplicação web utilizando o framework web Streamlit para facilitar o consumo das análises.
 
-Link para acesso à aplicação: [Análises](https://houserokectanalytics.herokuapp.com/)
+Link para acesso à aplicação: [Análises](https://fomezero-datamendes.streamlit.app/)
 
 # 4. Lições Aprendidas
+Foi constatado que poderíamos verificar e selecionar oportunidades de negócio para o CEO da empresa Fome Zero somente utilizando técnicas de manipulação de dados e ferramentas estatísticas, podendo entregar resultados sem a necessidade de utilizar técnicas e ferramentas mais complexas. Desta forma, oferecendo uma ótima relação custo/retorno.
 
 
 # 5. Próximos Passos
